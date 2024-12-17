@@ -183,9 +183,82 @@
                                 target="_blank">Breadcrumb Navigation</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="a-tags">flex-grow:</td>
+                        <td>flex-grow is a CSS property used in flexbox layouts. It determines how much a flex item
+                            should grow relative to other items in the same container when there is extra space
+                            available.
+                            <ul>
+                                <li>A value of 0 means the item will not grow.</li>
+                                <li>A positive value (e.g., 1, 2) allows the item to grow. The item with a higher value
+                                    will grow more compared to others with lower values.</li>
+                            </ul>
+                            For example, if one item has flex-grow: 2 and another has flex-grow: 1, the first item will
+                            grow twice as much as the second one.
+                        </td>
+                        <td>
+                            <a href="https://www.w3schools.com/cssref/css3_pr_flex-grow.php" target="_blank">flex-grow
+                                property</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a-tags">flex-shrink:</td>
+                        <td>flex-shrink is a CSS property used in flexbox layouts to control how much a flex item should
+                            shrink relative to other items in the same container when there is not enough space.
+                            <ul>
+                                <li>A value of 0 means the item will not shrink.</li>
+                                <li>A positive value (e.g., 1, 2) allows the item to shrink. An item with a higher value
+                                    will shrink more compared to others with lower values.</li>
+                            </ul>
+                            For example, if one item has flex-shrink: 2 and another has flex-shrink: 1, the first item
+                            will shrink twice as much as the second one when space is limited.
+                        </td>
+                        <td>
+                            <a href="https://www.w3schools.com/cssref/css3_pr_flex-grow.php" target="_blank">flex-shrink
+                                property</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a-tags">flex-basis:</td>
+                        <td>flex-basis is a CSS property used in flexbox layouts to define the initial size of a flex
+                            item before any space distribution occurs. It sets the default size of an element along the
+                            main axis of the flex container.
+                            <ul>
+                                <li>It can be specified in units like pixels (px), percentages (%), or other CSS units.
+                                </li>
+                                <li>If set to auto, the size is determined by the item’s content or width/height
+                                    properties.</li>
+                            </ul>
+                            If set to auto, the size is determined by the item’s content or width/height properties.
+                        </td>
+                        <td>
+                            <a href="https://www.w3schools.com/cssref/css3_pr_flex-grow.php" target="_blank">flex-basis
+                                property</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a-tags">flex</td>
+                        <td>
+                            The flex property in CSS is a shorthand for setting the flex-grow, flex-shrink, and
+                            flex-basis properties in one line. It defines how a flex item will grow, shrink, and
+                            what
+                            its initial size should be within a flex container.
+
+                            For example, flex: 2 2 100px; means:
+                            <ul>
+                                <li>flex-grow: 2; - The item can grow twice as much as others.</li>
+                                <li>flex-shrink: 2; - The item can shrink twice as much as others.</li>
+                                <li>flex-basis: 100px; - The initial size of the item is 100 pixels.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href="https://www.w3schools.com/cssref/css3_pr_flex-grow.php" target="_blank">flex-basis
+                                property</a>
+                        </td>
+                    </tr>
 
                     <!--Attribute Section-->
-                    <tr class="properties-section">
+                    <tr class="values-section">
                         <th>Properties Values</th>
                         <th>Description</th>
                         <th>Examples</th>
@@ -193,7 +266,7 @@
 
                     <!-- Justify-Content Value Section-->
                     <tr>
-                        <td class="a-tags" rowspan="5">justify-content:</td>
+                        <td class="v-tags" rowspan="5">justify-content:</td>
                         <td><em>flex-start</em> — all items will be positioned in order, starting from the left of the
                             parent
                             container, with no extra space between or before them</td>
@@ -244,7 +317,165 @@
                         </td>
                     </tr>
 
-                    <!-- Justify-Content Value Section-->
+                    <!-- Align-items Value Section-->
+                    <tr>
+                        <td class="v-tags" rowspan="5">align-items:</td>
+                        <td><em>flex-start</em> -
+                            all elements will be positioned at the top of the parent container.</td>
+                        <td class='a-container' id='a-flexstart'>
+                            <div class='left'></div>
+                            <div class='center'></div>
+                            <div class='right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>flex-end</em> - all elements will be positioned at the bottom of the parent container.
+                        </td>
+                        <td class='a-container' id='a-flexend'>
+                            <div class='left'></div>
+                            <div class='center'></div>
+                            <div class='right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>center</em> — the center of all elements will be positioned halfway between the top and
+                            bottom of the parent container</td>
+                        <td class='a-container' id='a-center'>
+                            <div class='left'></div>
+                            <div class='center'></div>
+                            <div class='right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>baseline</em> — the bottom of the content of all items will be aligned with each other.
+                        </td>
+                        <td class='a-container' id='a-baseline'>
+                            <div class='left'></div>
+                            <div class='center'></div>
+                            <div class='right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>stretch</em> — if possible, the items will stretch from top to bottom of the container
+                            (this is the default value; elements with a specified height will not stretch; elements with
+                            a minimum height or no height specified will stretch).</td>
+                        <td class='a-container' id='a-stretch'>
+                            <div class='left'></div>
+                            <div class='center'></div>
+                            <div class='right'></div>
+                        </td>
+                    </tr>
+
+                    <!-- Flex-Wrap Value Section-->
+                    <tr>
+                        <td class="v-tags" rowspan="3">flex-wrap:</td>
+                        <td><em>wrap</em> — child elements of a flex container that don’t fit into a row will move down
+                            to the next line</td>
+                        <td class='w-container' id='a-wrap'>
+                            <div class='box1'>
+                                <h6>1</h6>
+                            </div>
+                            <div class='box1'>
+                                <h6>2</h6>
+                            </div>
+                            <div class='box1'>
+                                <h6>3</h6>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>nowrap</em> — prevents items from wrapping; this is the default value and is only
+                            necessary to override a wrap value set by a different CSS rule.</td>
+                        <td class='w-container' id='a-nowrap'>
+                            <div class='box1'>
+                                <h6>1</h6>
+                            </div>
+                            <div class='box1'>
+                                <h6>2</h6>
+                            </div>
+                            <div class='box1'>
+                                <h6>3</h6>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>wrap-reverse</em> — the same functionality as wrap, but the order of rows within a flex
+                            container is reversed (for example, in a 2-row flexbox, the first row from a wrap container
+                            will become the second in wrap-reverse and the second row from the wrap container will
+                            become the first in wrap-reverse)</td>
+                        <td class='w-container' id='a-wrapreverse'>
+                            <div class='box1'>
+                                <h6>1</h6>
+                            </div>
+                            <div class='box1'>
+                                <h6>2</h6>
+                            </div>
+                            <div class='box1'>
+                                <h6>3</h6>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <!-- Align-Content Value Section-->
+                    <tr>
+                        <td class="v-tags" rowspan="6">align-content:</td>
+                        <td><em>flex-start</em> - all rows of elements will be positioned at the top of the parent
+                            container with no extra space between.</td>
+                        <td class='c-container' id='c-flexstart'>
+                            <div class='c-left'></div>
+                            <div class='c-center'></div>
+                            <div class='c-right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>flex-end</em> — all rows of elements will be positioned at the bottom of the parent
+                            container with no extra space between.
+                        </td>
+                        <td class='c-container' id='c-flexend'>
+                            <div class='c-left'></div>
+                            <div class='c-center'></div>
+                            <div class='c-right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>center</em>— all rows of elements will be positioned at the center of the parent element
+                            with no extra space between.</td>
+                        <td class='c-container' id='c-center'>
+                            <div class='c-left'></div>
+                            <div class='c-center'></div>
+                            <div class='c-right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>space-between</em> — all rows of elements will be spaced evenly from the top to the
+                            bottom of the container with no space above the first or below the last.
+                        </td>
+                        <td class='c-container' id='c-spacebetween'>
+                            <div class='c-left'></div>
+                            <div class='c-center'></div>
+                            <div class='c-right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>space-around</em>— all rows of elements will be spaced evenly from the top to the bottom
+                            of the container with the same amount of space at the top and bottom and between each
+                            element.</td>
+                        <td class='c-container' id='c-spacearound'>
+                            <div class='c-left'></div>
+                            <div class='c-center'></div>
+                            <div class='c-right'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><em>stretch</em> — if a minimum height or no height is specified, the rows of elements will
+                            stretch to fill the parent container from top to bottom (default value).</td>
+                        <td class='c-container' id='c-stretch'>
+                            <div class='c-left'></div>
+                            <div class='c-center'></div>
+                            <div class='c-right'></div>
+                        </td>
+                    </tr>
 
                 </tbody>
             </table>

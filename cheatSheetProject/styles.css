@@ -74,7 +74,7 @@ main {
 }
 
 table {
-    width: 70%;
+    width: 80%;
     margin: auto;
     border-collapse: collapse;
 }
@@ -130,8 +130,13 @@ a:active {
 }
 
 .attribute-section,
-.properties-section {
+.properties-section,
+.values-section {
     border-top: 5px solid black;
+}
+
+.v-tags {
+    background-color: rgb(251, 189, 106);
 }
 
 /* CSS styling */
@@ -171,4 +176,118 @@ a:active {
     display: flex;
     justify-content: space-between;
     border: none;
+}
+
+.a-container {
+    height: 80px;
+    background-color: rgb(196, 203, 193);
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+.left,
+.center,
+.right {
+    min-height: 20px;
+    width: 30px;
+    background-color: dodgerblue;
+    border: 1px solid lightgrey;
+    display: inline-block;
+}
+
+#a-baseline .center {
+    height: 30px;
+    width: 30px;
+    border: 5px solid rgb(224, 64, 192);
+}
+
+#a-flexstart {
+    align-items: flex-start;
+}
+
+#a-flexend {
+    align-items: flex-end;
+}
+
+#a-center {
+    align-items: center;
+}
+
+#a-baseline {
+    align-items: baseline;
+}
+
+.box1 {
+    height: 40px;
+    width: 40px;
+    background-color: dodgerblue;
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+
+.w-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    width: 120px;
+}
+
+
+#a-wrap {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#a-nowrap {
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+#a-wrapreverse {
+    flex-wrap: wrap-reverse;
+    display: flex;
+}
+
+.c-container {
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    height: 100px;
+    width: 130px;
+    border: none;
+}
+
+
+.c-left,
+.c-center,
+.c-right {
+    min-height: 20px;
+    width: 60px;
+    margin: 1px;
+    background-color: dodgerblue;
+    border: 2px solid lightgrey;
+    box-sizing: border-box;
+}
+
+#c-flexstart {
+    align-content: flex-start;
+}
+
+#c-flexend {
+    align-content: flex-end;
+}
+
+#c-center {
+    align-content: center;
+}
+
+#c-spacebetween {
+    align-content: space-between;
+}
+
+#c-spacearound {
+    align-content: space-around;
 }
